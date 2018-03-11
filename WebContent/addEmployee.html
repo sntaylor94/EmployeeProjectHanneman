@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Job System - Add Employee</title>
+</head>
+<body>
+	<form action = "addEmployeeServlet" method = "post">
+		Name: <input type = "text" name = "firstName" placeholder = "First Name"> <input type = "text" name = "lastName" placeholder = "Last Name"> <br /><br />
+		Phone: <input type = "tel" name = "phone"><br /> <br />
+		Home Address: <input type = "text" name = "streetAddress" placeholder = "Street Address">
+		<input type = "text" name="city" placeholder = "City">
+		<input type = "text" name = "state" placeholder = "State">
+		<input type = "text" name = "zip" placeholder = "Zip Code"> <br /> <br />
+		Email: <input type = "email" name = "email"><br /> <br />
+		Assign Position? <br />
+			<input type = "radio" name = "assignPos" value = "yes"> Yes <br />
+			<input type = "radio" name = "assignPos" value = "no"> No <br /> <br />
+		<input type = "submit" value = "Add Employee">
+		<input type = "reset" value = "Reset Fields">
+	</form>
+	<a href = "viewEmployeesServlet">View All Employees</a>
+	<a href = "employeeHome.html">Return Home</a>
+</body>
+</html>

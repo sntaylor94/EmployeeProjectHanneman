@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Job System - Add Building</title>
+</head>
+<body>
+	<form action="addBuildingServlet" method="post">
+		Building Address: <input type = "text" name = "streetAddress" placeholder = "Street Address">
+		<input type = "text" name="city" placeholder = "City">
+		<input type = "text" name = "state" placeholder = "State">
+		<input type = "text" name = "zip" placeholder = "Zip Code"> <br /> <br />
+		Square Feet: <input type = "number" name = "squareFeet"><br /> <br />
+		Number of Rooms: <input type = "number" name = "numberOfRooms"><br /> <br />
+		<input type = "submit" value = "Add Building">
+		<input type = "reset" value = "Reset Fields">
+	</form> <br /> <br />
+	<a href = "viewBuildingsServlet">View All Buildings</a><br />
+	<a href = "employeeHome.html">Return Home</a>
+</body>
+</html>
