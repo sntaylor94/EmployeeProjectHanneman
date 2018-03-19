@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="viewTables.css">
+<link rel="stylesheet" type="text/css" href="styling.css">
 <title>Employee Job System - View Buildings</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
 		<input type = "submit" value = "Edit Building" name = "doThis">
 		<input type = "submit" value = "Remove Building" name = "doThis">
 		<input type = "submit" value = "Add Building" name = "doThis"><br/>
-	</form>
+	</form><br />
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

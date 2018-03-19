@@ -3,17 +3,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee Job System - Add Position</title>
+<link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
 	<form action = "addPositionServlet" method = "post">
-		Job Description: <input type = "text" name = "description"> <br /> <br />
+		Job Description: <input type = "text" name = "description"> <br />
 		<input type = "radio" name = "hours" value = "full time"> Full Time<br />
-		<input type = "radio" name = "hours" value = "part time"> Part Time <br /> <br />
-		Pay Rate: <input type = "number" name = "payrate"><br /> <br />
+		<input type = "radio" name = "hours" value = "part time"> Part Time <br />
+		Pay Rate: <input type = "number" name = "payrate"><br />
 		<input type = "submit" value = "Add Position">
 		<input type = "reset" value = "Reset Fields">
 	</form><br />
-	<a href = "viewPositionsServlet">View All Positions</a>
+	<a href = "viewPositionsServlet">View All Positions</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

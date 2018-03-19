@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Employee Job System - Edit Job</title>
-<link rel="stylesheet" type="text/css" href="viewTables.css">
+<link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
 	<form method = "post" action = "editJobServlet">
@@ -43,11 +43,12 @@
 					<td>${currentBuilding.numRooms}</td>
 				</tr>
 			</c:forEach>
-		</table>
+		</table><br />
 		<input type = "hidden" name = "id" value = "${jobToEdit.id}">
 		<input type = "submit" value = "Save Edited Job">
 		<input type = "reset" value = "Reset Fields">
-	</form>
+	</form><br />
+	<a href = "viewEmployeesServlet">View All Employees</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styling.css">
 <title>Employee Job System - Edit Employee</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
 		<input type = "hidden" name = "id" value = "${employeeToEdit.id}">
 		<input type = "submit" value = "Save Edited Employee">
 		<input type = "reset" value = "Reset Fields">
-	</form>
-	<a href = "viewEmployeesServlet">View All Employees</a>
+	</form> <br />
+	<a href = "viewEmployeesServlet">View All Employees</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

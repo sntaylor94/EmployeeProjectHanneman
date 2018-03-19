@@ -5,18 +5,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styling.css">
 <title>Employee Job System - Edit Building</title>
 </head>
 <body>
 	<form action="editBuildingServlet" method="post">
-		Building Address: <input type = "text" name = "streetAddress" value = "${buildingToEdit.address}">
-		Square Feet: <input type = "text" name = "squareFeet" value = "${buildingToEdit.squareFeet}"><br /> <br />
-		Number of Rooms: <input type = "text" name = "numberOfRooms" value = "${buildingToEdit.numRooms}"><br /> <br />
+		Building Address: <input type = "text" name = "streetAddress" value = "${buildingToEdit.address}"><br />
+		Square Feet: <input type = "text" name = "squareFeet" value = "${buildingToEdit.squareFeet}"><br />
+		Number of Rooms: <input type = "text" name = "numberOfRooms" value = "${buildingToEdit.numRooms}"><br />
 		<input type = "hidden" name = "id" value = "${buildingToEdit.id}">
 		<input type = "submit" value = "Save Edited Building">
 		<input type = "reset" value = "Reset Fields">
-	</form> <br /> <br />
-	<a href = "viewBuildingsServlet">View All Buildings</a><br />
+	</form> <br />
+	<a href = "viewBuildingsServlet">View All Buildings</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

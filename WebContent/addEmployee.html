@@ -3,20 +3,21 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee Job System - Add Employee</title>
+<link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
 	<form action = "addEmployeeServlet" method = "post">
-		Name: <input type = "text" name = "firstName" placeholder = "First Name"> <input type = "text" name = "lastName" placeholder = "Last Name"> <br /><br />
-		Phone: <input type = "tel" name = "phone"><br /> <br />
+		Name: <input type = "text" name = "firstName" placeholder = "First Name"> <input type = "text" name = "lastName" placeholder = "Last Name"> <br />
+		Phone: <input type = "tel" name = "phone"><br />
 		Home Address: <input type = "text" name = "streetAddress" placeholder = "Street Address">
 		<input type = "text" name="city" placeholder = "City">
 		<input type = "text" name = "state" placeholder = "State">
-		<input type = "text" name = "zip" placeholder = "Zip Code"> <br /> <br />
-		Email: <input type = "email" name = "email"><br /> <br />
+		<input type = "text" name = "zip" placeholder = "Zip Code"> <br />
+		Email: <input type = "email" name = "email"><br />
 		<input type = "submit" value = "Add Employee">
 		<input type = "reset" value = "Reset Fields">
-	</form>
-	<a href = "viewEmployeesServlet">View All Employees</a>
+	</form><br />
+	<a href = "viewEmployeesServlet">View All Employees</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>

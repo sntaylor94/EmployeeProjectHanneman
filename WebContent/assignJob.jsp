@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="viewTables.css">
+<link rel="stylesheet" type="text/css" href="styling.css">
 <title>Employee Job System - Assign Employee Job</title>
 </head>
 <body>
@@ -71,11 +71,11 @@
 					<td>${currentBuilding.squareFeet}</td>
 					<td>${currentBuilding.numRooms}</td>
 			</c:forEach>
-		</table>
+		</table><br />
 		<input type = "submit" value = "Assign Job">
 		<input type = "reset" value = "Reset Fields">
-	</form>
-	<a href = "viewEmployeesServlet">View All Employees</a><br />
+	</form><br />
+	<a href = "viewEmployeesServlet">View All Employees</a> | 
 	<a href = "employeeHome.html">Return Home</a>
 </body>
 </html>
