@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="viewTables.css">
-<title>Insert title here</title>
+<title>Employee Job System - View Employees</title>
 </head>
 <body>
-	<form method = "post" action = "editPositionServlet">
+	<form method = "post" action = "editEmployeeListServlet">
 		<table>
 			<tr>
 				<th>Employee ID</th>
@@ -33,7 +33,9 @@
 		</table><br />
 		<input type = "submit" value = "Edit Employee" name = "doThis">
 		<input type = "submit" value = "Terminate Employee" name = "doThis">
-		<input type = "submit" value = "Add Employee" name = "doThis"><br/>
+		<input type = "submit" value = "Add Employee" name = "doThis">
+		<input type = "submit" value = "View this Employees' Jobs" name = "doThis"><br/>
+		<input type = "submit" value = "Assign Employee New Job" name = "doThis"><br />
 	</form>
 	<a href = "employeeHome.html">Return Home</a>
 </body>

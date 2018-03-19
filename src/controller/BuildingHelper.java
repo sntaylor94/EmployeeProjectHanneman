@@ -57,4 +57,23 @@ public class BuildingHelper {
 		em.close();
 	}
 
+
+	public void updateBuilding(Building b) {
+		// TODO Auto-generated method stub
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<Building> updateBuilding = em.createQuery("UPDATE Building b SET b.address = :selectedAddress, b.squareFeet = :selectedSF, b.numRooms = :selectedNumRooms " + "WHERE b.id = :selectedId", Building.class);
+		updateBuilding.setParameter("selectedAddress", b.getAddress());
+		updateBuilding.setParameter("selectedSF", b.getSquareFeet());
+		updateBuilding.setParameter("selectedNumRooms", b.getNumRooms());
+		updateBuilding.setParameter("selectedId", b.getId());
+		
+		int updateCount = updateBuilding.executeUpdate();
+		if(updateCount>0) {
+			System.out.println("Building Updated");
+		}
+		em.getTransaction().commit();
+		em.close();
+	}
+
 }

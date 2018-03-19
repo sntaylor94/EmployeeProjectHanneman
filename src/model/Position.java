@@ -20,21 +20,25 @@ public class Position {
 	private int hours;
 	@Column(name = "PAY_RATE")
 	private double payRate;
+	@Column(name = "ACTIVE_JOB")
+	private char activeJob;
 	
 	
 	public Position() {
-		
+		this.setActiveJob('Y');
 	}
 	
 	public Position(String d, int h) {
 		this.setDescription(d);
 		this.setHours(h);
+		this.setActiveJob('Y');
 	}
 	
 	public Position(String d, int h, double p) {
 		this.setDescription(d);
 		this.setHours(h);
 		this.setPayRate(p);
+		this.setActiveJob('Y');
 	}
 	
 	public String getDescription() {
@@ -57,6 +61,14 @@ public class Position {
 	}
 	public int getId() {
 		return id;
+	}
+	
+	public char getActiveJob() {
+		return activeJob;
+	}
+	
+	public void setActiveJob(char active) {
+		this.activeJob = active;
 	}
 	
 	public String getPositionDetails() {

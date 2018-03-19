@@ -61,4 +61,23 @@ public class PositionHelper {
 		
 	}
 
+
+	public void updatePosition(Position p) {
+		// TODO Auto-generated method stub
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<Position> updatePosition = em.createQuery("UPDATE Position p SET p.description = :selectedDesc, p.hours = :selectedHours, p.payRate = :selectedPR, p.activeJob = :selectedActive " + "WHERE p.id = :selectedId", Position.class);
+		updatePosition.setParameter("selectedDesc", p.getDescription());
+		updatePosition.setParameter("selectedHours", p.getHours());
+		updatePosition.setParameter("selectedPR", p.getPayRate());
+		updatePosition.setParameter("selectedActive", p.getActiveJob());
+		updatePosition.setParameter("selectedId", p.getId());
+		int updateCount = updatePosition.executeUpdate();
+		if(updateCount>0) {
+			System.out.println("Position Updated");
+		}
+		em.getTransaction().commit();
+		em.close();
+	}
+
 }

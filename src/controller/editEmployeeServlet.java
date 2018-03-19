@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import model.Employee;
 
 /**
- * Servlet implementation class addEmployeeServlet
+ * Servlet implementation class editEmployeeServlet
  */
-@WebServlet("/addEmployeeServlet")
-public class addEmployeeServlet extends HttpServlet {
+@WebServlet("/editEmployeeServlet")
+public class editEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addEmployeeServlet() {
+    public editEmployeeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,16 +35,22 @@ public class addEmployeeServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String phone = request.getParameter("phone");
-		String streetAddress = request.getParameter("streetAddress");
-		String city = request.getParameter("city");
-		String state = request.getParameter("state");
-		String zip = request.getParameter("zip");
+		String address = request.getParameter("homeAddress");
 		String email = request.getParameter("email");
-		String homeAddress = streetAddress + " - " + city + ", " + state + " " + zip;
+		LocalDate termDate = LocalDate.parse(request.getParameter("termDate"));
+		int tempId = Integer.parseInt(request.getParameter("id"));
 		
-		Employee employee = new Employee(firstName, lastName, phone, homeAddress, email);
-		eh.addEmployee(employee);
-		getServletContext().getRequestDispatcher("/employeeHome.html").forward(request, response);
+		Employee employeeToUpdate = eh.searchForEmployeeById(tempId);
+		employeeToUpdate.setFirstName(firstName);
+		employeeToUpdate.setLastName(lastName);
+		employeeToUpdate.setPhone(phone);
+		employeeToUpdate.setHomeAddress(address);
+		employeeToUpdate.setEmail(email);
+		employeeToUpdate.setTerminationDate(termDate);
+		
+		eh.updateEmployee(employeeToUpdate);
+		
+		getServletContext().getRequestDispatcher("/viewEmployeesServlet").forward(request, response);
 	}
 
 }

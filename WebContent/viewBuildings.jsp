@@ -9,7 +9,7 @@
 <title>Employee Job System - View Buildings</title>
 </head>
 <body>
-	<form method = "post" action = "editBuildingServlet">
+	<form method = "post" action = "editBuildingListServlet">
 		<table>
 			<tr>
 				<th>Building ID</th>

@@ -9,13 +9,14 @@
 <title>Employee Job System - View Positions</title>
 </head>
 <body>
-	<form method = "post" action = "editPositionServlet">
+	<form method = "post" action = "editPositionListServlet">
 		<table>
 			<tr>
 				<th>Position ID</th>
 				<th>Description</th>
 				<th>Hours</th>
 				<th>Pay Rate</th>
+				<th>Active Job</th>
 			</tr>
 			<c:forEach items = "${requestScope.allPositions}" var = "currentPosition">
 				<tr>
@@ -23,6 +24,7 @@
 					<td>${currentPosition.description}</td>
 					<td>${currentPosition.hours}</td>
 					<td>${currentPosition.payRate}</td>
+					<td>${currentPosition.activeJob}</td>
 			</c:forEach>
 		</table><br />
 		<input type = "submit" value = "Edit Position" name = "doThis">

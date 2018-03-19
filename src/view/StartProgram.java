@@ -157,7 +157,7 @@ public class StartProgram {
 			System.out.println("Enter Employee ID Being Assigned to Job: ");
 			int eId = scan.nextInt();
 			scan.nextLine();
-			Employee employee = eh.getEmployee(eId);
+			Employee employee = eh.searchForEmployeeById(eId);
 			System.out.println("Enter Start Day: ");
 			int startDay = scan.nextInt();
 			scan.nextLine();
